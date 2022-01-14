@@ -1,0 +1,98 @@
+// ============  Flexbox Mixin  ============ //
+@mixin flex($flex-type: "rowcen") {
+    display: flex;
+    @if $flex-type == "rowcen" {
+        align-items: center;
+    }
+    @if $flex-type == "colcen" {
+        flex-direction: column;
+        align-items: center;
+    }
+    @if $flex-type == "rowcenbw" {
+        align-items: center;
+        justify-content: space-between;
+    }
+    @if $flex-type == "colcenbw" {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @if $flex-type == "colbw" {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @if $flex-type == "rowbw" {
+        justify-content: space-between;
+    }
+    @if $flex-type == "cencen" {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// ============  Align Center by Transform  ============ //
+@mixin transform($transform-type: "xy") {
+    position: absolute;
+
+    @if $transform-type == "xy" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @if $transform-type == "x" {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @if $transform-type == "y" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* // ============  Responsive Mixin (Mobile First)  ============ //
+
+@mixin sm {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+*/
+
+// ============  Responsive Mixin (Desktop First)  ============ //
+@mixin lg {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin xs {
+    @media screen and (max-width: 575px) {
+        @content;
+    }
+}

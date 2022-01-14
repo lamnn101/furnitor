@@ -1,0 +1,205 @@
+.header {
+   position: fixed;
+   height: 76px;
+   width: 100%;
+   transition: all 0.5s;
+   z-index: 999;
+   &__search,
+   &__nav,
+   &__feature {
+      @include flex(rowcen);
+   }
+   .container {
+      line-height: 76px;
+      .wrapper {
+         @include flex(rowcen);
+         justify-content: space-between;
+      }
+   }
+   &__search {
+      color: $gray;
+      cursor: pointer;
+      > .icon-search {
+         margin-right: 6px;
+         color: $primary-color;
+      }
+   }
+   &__nav {
+      .nav-link {
+         position: relative;
+         letter-spacing: 0.5px;
+         font-weight: 500;
+         color: $primary-color;
+         + .nav-link {
+            margin-left: 40px;
+         }
+         &:not([data-img='image-logo'])::after {
+            position: absolute;
+            bottom: 20px;
+            content: '';
+            background-color: $primary-color;
+            display: block;
+            height: 2px;
+            width: 0%;
+            transition: all 0.5s;
+         }
+         &:hover {
+            &::after {
+               width: 100%;
+            }
+            .nav-link__menu {
+               visibility: visible;
+               opacity: 1;
+            }
+         }
+         .nav-link__menu {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s;
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 0 24px;
+            background-color: $white;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+            width: 1108px;
+            left: -361px;
+            padding: 24px 24px 24px;
+            line-height: initial;
+            .menu-type {
+               display: flex;
+               flex-direction: column;
+               .menu-type__label {
+                  @include flex(rowcen);
+                  font-size: 16px;
+                  font-weight: 600;
+                  margin-bottom: 16px;
+                  .icon-arrow {
+                     margin-left: 0;
+                     font-size: 20px;
+                     transition: all 0.2s;
+                  }
+                  &:hover .icon-arrow {
+                     transform: translateX(4px);
+                  }
+               }
+               .menu-type__item {
+                  font-weight: 400;
+                  color: $gray;
+                  line-height: 30px;
+                  transition: all 0.5s;
+                  &:hover {
+                     color: $primary-color;
+                  }
+               }
+            }
+            .menu-col {
+               @include flex(colbw);
+               > img {
+                  flex: 1;
+                  margin-bottom: 20px;
+                  object-fit: cover;
+               }
+            }
+         }
+      }
+      .nav-link--img {
+         width: 170px;
+      }
+      .nav-link--expand {
+         .nav-link__wrapper {
+            @include flex(rowcen);
+         }
+         .icon-arrow {
+            color: $gray;
+            font-size: 18px;
+            margin-left: 4px;
+         }
+      }
+   }
+   &__feature {
+      .feature {
+         position: relative;
+         > span {
+            color: $primary-color;
+            display: block;
+         }
+         + .feature {
+            margin-left: 24px;
+         }
+         .feature-count {
+            position: absolute;
+            right: -8px;
+            top: -8px;
+
+            &::before {
+               position: relative;
+               content: '';
+               display: block;
+               background-color: $red-light;
+               width: 18px;
+               height: 18px;
+               border-radius: 50%;
+            }
+            .count-number {
+               position: absolute;
+               @include transform(xy);
+               color: $white;
+               font-size: 11px;
+               font-weight: 600;
+            }
+         }
+      }
+   }
+}
+
+.search-modal {
+   visibility: hidden;
+   opacity: 0;
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   height: 100vh;
+   z-index: 2;
+   padding: 10% 10%;
+   background-color: $white;
+   .input-wrapper {
+      position: relative;
+      > input {
+         font-size: 24px;
+         width: 100%;
+         padding: 13px 0;
+         border: none;
+         background-color: transparent;
+      }
+      .icon-search {
+         font-size: 40px;
+         right: 0;
+         z-index: 2;
+         @include transform(y);
+         color: $primary-color;
+      }
+      &::after {
+         position: absolute;
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: $primary-color;
+         bottom: 0px;
+      }
+   }
+   .modal-icon-close {
+      position: absolute;
+      font-size: 40px;
+      top: 52px;
+      right: 52px;
+      cursor: pointer;
+   }
+}
+
+.sticky-header {
+   background-color: white;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,47 @@
+@import './mixin';
+@import './variable';
+
+.container {
+   max-width: 1140px;
+   padding: 0 16px;
+   margin: 0 auto;
+   @include lg {
+      max-width: 992px;
+   }
+   @include md {
+      max-width: 752px;
+   }
+   @include sm {
+      max-width: 572px;
+   }
+   @include xs {
+      width: 100%;
+   }
+}
+
+.container-xl {
+   max-width: 95%;
+}
+
+.btn {
+   font-weight: 700;
+   padding: 10px 12px;
+   background-color: transparent;
+   border: 1px solid $primary-color;
+   transition: all 0.3s;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   &:hover {
+      background-color: $primary-color;
+      color: $white;
+   }
+}
+
+.btn--primary {
+   padding: 10px 30px;
+}
+
+.modal-active {
+   visibility: visible !important;
+   opacity: 1 !important;
+}
