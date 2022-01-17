@@ -1,0 +1,26 @@
+.slogan {
+   padding: 120px 0;
+   .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__icon {
+      margin-bottom: 40px;
+      > img {
+         width: 110px;
+         height: 110px;
+         object-fit: cover;
+      }
+   }
+   &__title {
+      line-height: 56px;
+      text-align: center;
+      max-width: 924px;
+   }
+   &__subtitle {
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 24px 0;
+   }
+}
