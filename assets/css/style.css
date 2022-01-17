@@ -111,6 +111,7 @@ img {
   transition: all 0.3s;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: #000000;
 }
 
 .btn--mega:hover {
