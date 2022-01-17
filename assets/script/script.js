@@ -36,14 +36,31 @@ $(document).ready(function () {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
       dots: true,
       speed: 1000,
       pauseOnHover: false,
       pauseOnFocus: false,
-
-      // fade: true,
-      // cssEase: 'linear',
+   });
+});
+// Categories Slider
+$(document).ready(function () {
+   $('.categories__slider').slick({
+      // arrows: false,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500,
+      prevArrow: `<button type="button" id="slick-prev" class="btn-slider btn-slider--slick btn-slider--hide slick-prev"><span class="material-icons-outlined">arrow_back</span></button>`,
+      nextArrow: `<button type="button" id="slick-next" class="btn-slider btn-slider--slick btn-slider--hide slick-next"><span class="material-icons-outlined">arrow_forward</span></button>`,
+      responsive: [
+         {
+            breakpoint: 1921,
+            settings: {
+               slidesToShow: 4,
+            },
+         },
+      ],
    });
 });

@@ -4,17 +4,15 @@
    width: 100%;
    transition: all 0.5s;
    z-index: 999;
+   line-height: 76px;
    &__search,
    &__nav,
    &__feature {
       @include flex(rowcen);
    }
-   .container {
-      line-height: 76px;
-      .wrapper {
-         @include flex(rowcen);
-         justify-content: space-between;
-      }
+   .wrapper {
+      @include flex(rowcen);
+      justify-content: space-between;
    }
    &__search {
       color: $gray;
@@ -161,7 +159,7 @@
    right: 0;
    top: 0;
    height: 100vh;
-   z-index: 2;
+   z-index: 9999;
    padding: 10% 10%;
    background-color: $white;
    .input-wrapper {

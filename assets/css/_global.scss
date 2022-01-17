@@ -5,6 +5,7 @@
    max-width: 1140px;
    padding: 0 16px;
    margin: 0 auto;
+
    @include lg {
       max-width: 992px;
    }
@@ -19,10 +20,13 @@
    }
 }
 
-.container-xl {
-   max-width: 95%;
+.container-90 {
+   padding: 0 16px;
+   margin: 0 auto;
+   max-width: 90%;
 }
 
+// Buttons
 .btn {
    font-weight: 700;
    padding: 10px 12px;
@@ -31,17 +35,87 @@
    transition: all 0.3s;
    text-transform: uppercase;
    letter-spacing: 0.5px;
+}
+.btn--mega {
    &:hover {
       background-color: $primary-color;
       color: $white;
    }
 }
-
 .btn--primary {
    padding: 10px 30px;
+   &:hover {
+      background-color: $primary-color;
+      color: $white;
+   }
+}
+.btn--secondary {
+   position: relative;
+   border: none;
+   padding: 4px 0;
+
+   &::after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      display: block;
+      background-color: $gray-md;
+      width: 100%;
+      height: 1px;
+      transition: all 0.3s;
+   }
+   &:hover {
+      &::after {
+         background-color: $primary-color;
+      }
+   }
 }
 
+.btn-slider {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   border: 1px solid $gray-light;
+}
+.btn-slider--slick {
+   position: absolute;
+}
+.btn-slider--hide {
+   font-size: 0;
+   width: 0;
+   height: 0;
+   border: none;
+   > span {
+      font-size: 0;
+   }
+}
+
+// Modals
 .modal-active {
    visibility: visible !important;
    opacity: 1 !important;
+}
+
+// Text
+.section-title {
+   font-size: 40px;
+   line-height: 48px;
+}
+.section-desc {
+   color: $gray;
+   letter-spacing: 0.5px;
+   font-weight: 500;
+}
+.card-title {
+   font-size: 32px;
+   line-height: 48px;
+}
+
+// Padding, Margin
+.pb-200 {
+   padding-bottom: 200px;
 }
