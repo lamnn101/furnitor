@@ -4,6 +4,7 @@ const heroSlider = document.querySelector('.hero-slider');
 const headerNav = document.querySelector('.header__nav');
 const btnSearch = document.querySelector('.header__search');
 const modalSearch = document.querySelector('.search-modal');
+const modalSearchInner = document.querySelector('.search-modal-inner');
 const modalClose = document.querySelector('.modal-icon-close');
 const btnSlogan = document.querySelector('.slogan__btn');
 
@@ -14,11 +15,13 @@ const section3 = document.querySelector('#section--3');
 // Search
 btnSearch.addEventListener('click', function () {
    modalSearch.classList.add('modal-active');
+   modalSearchInner.style.transform = 'translateY(0%)';
 });
 
 modalClose.addEventListener('click', function () {
    modalSearch.classList.remove('modal-active');
    document.querySelector('.search-modal__input').value = '';
+   modalSearchInner.style.transform = 'translateY(-50%)';
 });
 
 // Header Sticky

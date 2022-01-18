@@ -160,8 +160,14 @@
    top: 0;
    height: 100vh;
    z-index: 9999;
-   padding: 10% 10%;
    background-color: $white;
+   transition: all 0.5s;
+   .search-modal-inner {
+      position: relative;
+      padding: 10% 10%;
+      transition: all 0.5s;
+      transform: translateY(-50%);
+   }
    .input-wrapper {
       position: relative;
       > input {

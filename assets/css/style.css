@@ -530,8 +530,18 @@ img {
   top: 0;
   height: 100vh;
   z-index: 9999;
-  padding: 10% 10%;
   background-color: #ffffff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.search-modal .search-modal-inner {
+  position: relative;
+  padding: 10% 10%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .search-modal .input-wrapper {
