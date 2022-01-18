@@ -82,6 +82,10 @@
    height: 50px;
    border: 1px solid $gray-light;
    background-color: $white;
+   transition: all 0.3s;
+   &:hover {
+      border: 1px solid $gray;
+   }
    &--slick {
       position: absolute;
    }

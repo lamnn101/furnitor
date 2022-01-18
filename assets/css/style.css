@@ -166,6 +166,12 @@ img {
   height: 50px;
   border: 1px solid #e5e5e5;
   background-color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-slider:hover {
+  border: 1px solid #808080;
 }
 
 .btn-slider--slick {
@@ -755,6 +761,14 @@ img {
 
 .our-products__card {
   position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.our-products__card:hover {
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 .our-products__card .card-img {
@@ -939,7 +953,14 @@ img {
 .categories__slider .categories-slider__card {
   position: relative;
   height: 413px;
-  padding: 12px 12px;
+  margin: 12px 12px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.categories__slider .categories-slider__card:hover {
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 .categories__slider .categories-slider__card .card__content {

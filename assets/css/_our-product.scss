@@ -14,6 +14,11 @@
    }
    &__card {
       position: relative;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+         box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      }
 
       .card-img {
          width: 100%;
