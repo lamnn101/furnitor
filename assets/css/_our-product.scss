@@ -1,9 +1,16 @@
 .our-products {
    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .content {
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 24px;
+      margin-bottom: 44px;
    }
    &__card {
       position: relative;
@@ -75,6 +82,18 @@
          }
          > button {
             margin-top: auto;
+         }
+         .event-tag--lg {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            flex-direction: column;
+            line-height: 18px;
+            font-weight: 400;
+            text-transform: initial;
+            .price {
+               font-weight: 700;
+            }
          }
       }
    }

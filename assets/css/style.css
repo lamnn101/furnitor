@@ -207,6 +207,7 @@ img {
 .card-title {
   font-size: 32px;
   line-height: 48px;
+  font-weight: 600;
 }
 
 .pb-120 {
@@ -239,6 +240,14 @@ img {
 
 .event-tag--sale {
   background-color: #f86c6c;
+}
+
+.event-tag--lg {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
 }
 
 .price-sale {
@@ -720,6 +729,20 @@ img {
 }
 
 .our-products .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-products .content {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -727,6 +750,7 @@ img {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   gap: 24px;
+  margin-bottom: 44px;
 }
 
 .our-products__card {
@@ -825,6 +849,23 @@ img {
 
 .our-products .card-lg .card-content > button {
   margin-top: auto;
+}
+
+.our-products .card-lg .card-content .event-tag--lg {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: initial;
+}
+
+.our-products .card-lg .card-content .event-tag--lg .price {
+  font-weight: 700;
 }
 
 .our-products .card-01 .card-img {
