@@ -5,6 +5,11 @@ const headerNav = document.querySelector('.header__nav');
 const btnSearch = document.querySelector('.header__search');
 const modalSearch = document.querySelector('.search-modal');
 const modalClose = document.querySelector('.modal-icon-close');
+const btnSlogan = document.querySelector('.slogan__btn');
+
+const section1 = document.querySelector('#section--1');
+const section2 = document.querySelector('#section--2');
+const section3 = document.querySelector('#section--3');
 
 // Search
 btnSearch.addEventListener('click', function () {
@@ -63,4 +68,10 @@ $(document).ready(function () {
          },
       ],
    });
+});
+
+// Button Scroll
+btnSlogan.addEventListener('click', () => {
+   const topOfElement = section3.offsetTop - 100;
+   window.scroll({ top: topOfElement, behavior: 'smooth' });
 });

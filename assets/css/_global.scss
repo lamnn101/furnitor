@@ -82,17 +82,17 @@
    height: 50px;
    border: 1px solid $gray-light;
    background-color: $white;
-}
-.btn-slider--slick {
-   position: absolute;
-}
-.btn-slider--hide {
-   font-size: 0;
-   width: 0;
-   height: 0;
-   border: none;
-   > span {
+   &--slick {
+      position: absolute;
+   }
+   &--hide {
       font-size: 0;
+      width: 0;
+      height: 0;
+      border: none;
+      > span {
+         font-size: 0;
+      }
    }
 }
 
@@ -111,6 +111,10 @@
    color: $gray;
    letter-spacing: 0.5px;
    font-weight: 500;
+   &--light {
+      font-weight: 300;
+      color: $primary-color;
+   }
 }
 .card-title {
    font-size: 32px;
@@ -118,6 +122,43 @@
 }
 
 // Padding, Margin
-.pb-200 {
-   padding-bottom: 200px;
+.pb-120 {
+   padding-bottom: 120px;
+}
+
+// Tags
+.event-tag {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   color: $white;
+   font-size: 13px;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-align: center;
+   &--new {
+      background-color: $green-light;
+   }
+   &--sale {
+      background-color: $red-light;
+   }
+}
+
+// Price
+.price-sale {
+   display: flex;
+   align-items: baseline;
+   &__new {
+      color: $red-light;
+   }
+   &__old {
+      font-size: 12px;
+      color: $gray;
+      text-decoration: line-through;
+      font-weight: 400;
+      margin-left: 8px;
+   }
 }
