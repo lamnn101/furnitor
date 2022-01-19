@@ -1,18 +1,24 @@
 'use strict';
+
 const header = document.querySelector('.header');
 const heroSlider = document.querySelector('.hero-slider');
-const headerNav = document.querySelector('.header__nav');
+const nav = document.querySelector('.header__nav');
 const btnSearch = document.querySelector('.header__search');
 const modalSearch = document.querySelector('.search-modal');
 const modalSearchInner = document.querySelector('.search-modal-inner');
 const modalClose = document.querySelector('.modal-icon-close');
 const btnSlogan = document.querySelector('.slogan__btn');
+const menuCategories = document.querySelector('.nav-link--expand');
+const iconArrowCategories = document.querySelector('.icon-arrow--mb');
+const btnBurger = document.querySelector('.header__burger');
+const btnCloseSidebar = document.querySelector('.icon-close-sidebar');
+const overlaySidebar = document.querySelector('.sidebar-overlay');
 
 const section1 = document.querySelector('#section--1');
 const section2 = document.querySelector('#section--2');
 const section3 = document.querySelector('#section--3');
 
-// Search
+// Search modal
 btnSearch.addEventListener('click', function () {
    modalSearch.classList.add('modal-active');
    modalSearchInner.style.transform = 'translateY(0%)';
@@ -24,7 +30,7 @@ modalClose.addEventListener('click', function () {
    modalSearchInner.style.transform = 'translateY(-50%)';
 });
 
-// Header Sticky
+// Header sticky
 const callback = function (entries) {
    const [entry] = entries;
    if (!entry.isIntersecting) header.classList.add('sticky-header');
@@ -37,14 +43,14 @@ const options = {
 const observer = new IntersectionObserver(callback, options);
 observer.observe(heroSlider);
 
-// Hero Slider
+// Hero slider
 $(document).ready(function () {
    $('.hero-slider').slick({
       arrows: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
       dots: true,
       speed: 1000,
@@ -52,7 +58,8 @@ $(document).ready(function () {
       pauseOnFocus: false,
    });
 });
-// Categories Slider
+
+// Categories slider
 $(document).ready(function () {
    $('.categories__slider').slick({
       // arrows: false,
@@ -73,8 +80,32 @@ $(document).ready(function () {
    });
 });
 
-// Button Scroll
+// Section scrolling
 btnSlogan.addEventListener('click', () => {
    const topOfElement = section3.offsetTop - 100;
    window.scroll({ top: topOfElement, behavior: 'smooth' });
+});
+
+// Sidebar
+btnBurger.addEventListener('click', function (e) {
+   e.preventDefault();
+   nav.classList.add('sidebar-active');
+   overlaySidebar.classList.add('overlay-active');
+});
+
+const closeSidebar = function (el) {
+   el.addEventListener('click', function () {
+      nav.classList.remove('sidebar-active');
+      overlaySidebar.classList.remove('overlay-active');
+   });
+};
+closeSidebar(btnCloseSidebar);
+closeSidebar(overlaySidebar);
+
+// Categories menu expand
+menuCategories.addEventListener('click', function () {
+   if (!menuCategories.classList.contains('expand-menu-active'))
+      iconArrowCategories.style.transform = 'rotate(0deg)';
+   else iconArrowCategories.style.transform = 'rotate(-90deg)';
+   menuCategories.classList.toggle('expand-menu-active');
 });

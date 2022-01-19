@@ -55,18 +55,23 @@
       <header class="header">
          <div class="container-90">
             <div class="wrapper">
+               <a href="#" class="header__burger material-icons-outlined">
+                  menu
+               </a>
                <span class="header__search">
                   <span class="icon-search material-icons-outlined">
                      search
                   </span>
-                  Search
+                  <span class="label-search">Search</span>
                </span>
                <div class="header__nav">
                   <a href="#" class="nav-link">Our Products</a>
-                  <a href="#" class="nav-link nav-link--expand">
+                  <div href="#" class="nav-link nav-link--expand">
                      <span class="nav-link__wrapper">
                         <span class="nav-link__label">Categories</span>
-                        <span class="icon-arrow material-icons-outlined">
+                        <span
+                           class="icon-arrow icon-arrow--mb material-icons-outlined"
+                        >
                            expand_more
                         </span>
                      </span>
@@ -139,7 +144,15 @@
                            </button>
                         </span>
                      </span>
-                  </a>
+
+                     <!-- Categories Link -->
+                     <div class="nav-link__categories-links">
+                        <a href="#" class="category-link">Sofas</a>
+                        <a href="#" class="category-link">Tables</a>
+                        <a href="#" class="category-link">Chairs</a>
+                        <a href="#" class="category-link">Decors</a>
+                     </div>
+                  </div>
                   <a
                      href="#"
                      data-img="image-logo"
@@ -149,7 +162,34 @@
                   </a>
                   <a href="#" class="nav-link">Blogs</a>
                   <a href="#" class="nav-link">Contact</a>
+                  <div class="nav__footer">
+                     <a href="#" class="feature feature--user">
+                        <span
+                           class="nav-footer-icon nav-footer-icon--user material-icons-outlined"
+                        >
+                           account_circle
+                        </span>
+                     </a>
+                     <a href="#" class="feature feature--fav">
+                        <span
+                           class="nav-footer-icon nav-footer-icon--fav material-icons-outlined"
+                        >
+                           favorite_border
+                        </span>
+                        <span class="feature-count">
+                           <span class="count-number">2</span>
+                        </span>
+                     </a>
+                  </div>
+                  <span class="icon-close-sidebar material-icons-outlined">
+                     close
+                  </span>
                </div>
+               <!-- Overlay sidebar -->
+               <div class="sidebar-overlay"></div>
+               <a href="#" class="header__logo-mb">
+                  <img src="./assets/img/logo-main.png" alt="logo" />
+               </a>
                <div class="header__feature">
                   <a href="#" class="feature feature--user">
                      <span class="material-icons-outlined">
@@ -165,7 +205,9 @@
                      </span>
                   </a>
                   <a href="#" class="feature feature--cart">
-                     <span class="material-icons-outlined"> shopping_bag </span>
+                     <span class="icon-cart material-icons-outlined">
+                        shopping_bag
+                     </span>
                      <span class="feature-count">
                         <span class="count-number">5</span>
                      </span>
