@@ -580,7 +580,7 @@ img {
 }
 
 .hero-slider {
-  height: 100vh;
+  height: 100%;
 }
 
 .hero-slider .wrapper {
