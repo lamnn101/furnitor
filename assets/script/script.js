@@ -13,6 +13,7 @@ const iconArrowCategories = document.querySelector('.icon-arrow--mb');
 const btnBurger = document.querySelector('.header__burger');
 const btnCloseSidebar = document.querySelector('.icon-close-sidebar');
 const overlaySidebar = document.querySelector('.sidebar-overlay');
+const searchInput = document.querySelector('.search-modal__input');
 
 const section1 = document.querySelector('#section--1');
 const section2 = document.querySelector('#section--2');
@@ -22,11 +23,14 @@ const section3 = document.querySelector('#section--3');
 btnSearch.addEventListener('click', function () {
    modalSearch.classList.add('modal-active');
    modalSearchInner.style.transform = 'translateY(0%)';
+   setTimeout(function () {
+      searchInput.focus();
+   }, 200);
 });
 
 modalClose.addEventListener('click', function () {
    modalSearch.classList.remove('modal-active');
-   document.querySelector('.search-modal__input').value = '';
+   searchInput.value = '';
    modalSearchInner.style.transform = 'translateY(-50%)';
 });
 

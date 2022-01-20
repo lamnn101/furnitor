@@ -193,19 +193,21 @@
          }
       }
       .nav-link__menu {
+         background-color: $white;
+         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
+         padding: 24px 24px 24px;
+         line-height: initial;
+         width: 1108px;
+
+         display: grid;
+         grid-template-columns: repeat(5, 1fr);
+         gap: 0 24px;
+         position: absolute;
+         left: -361px;
+
          visibility: hidden;
          opacity: 0;
          transition: all 0.3s;
-         position: absolute;
-         display: grid;
-         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-         gap: 0 24px;
-         background-color: $white;
-         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
-         width: 1108px;
-         left: -361px;
-         padding: 24px 24px 24px;
-         line-height: initial;
          .menu-type {
             display: flex;
             flex-direction: column;
@@ -304,9 +306,12 @@
    transition: all 0.3s;
    .search-modal-inner {
       position: relative;
-      padding: 10% 10%;
+      padding: 10% 10% 0;
       transition: all 0.3s;
       transform: translateY(-50%);
+      @include md {
+         padding: 18% 10% 0;
+      }
    }
    .input-wrapper {
       position: relative;
