@@ -87,6 +87,7 @@
          visibility: hidden;
          opacity: 0;
          transform: translateX(-80%);
+         -webkit-transform: -webkit-translateX(-80%);
          transition: all 0.3s;
          z-index: 21;
       }
