@@ -637,7 +637,7 @@ img {
 }
 
 .hero-slider .wrapper .slide__designer {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,7 +659,7 @@ img {
 
 @media screen and (max-width: 991px) {
   .hero-slider .wrapper .slide__designer {
-    margin-bottom: 44px;
+    padding-bottom: 44px;
   }
 }
 
