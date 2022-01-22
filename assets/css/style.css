@@ -641,9 +641,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero-slider .wrapper .slide__designer .after {
@@ -659,8 +659,7 @@ img {
 
 @media screen and (max-width: 991px) {
   .hero-slider .wrapper .slide__designer {
-    margin-bottom: 0;
-    height: 78px;
+    margin-bottom: 80px;
   }
 }
 
@@ -673,7 +672,6 @@ img {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    height: 110px;
   }
 }
 

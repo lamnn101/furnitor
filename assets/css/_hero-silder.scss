@@ -16,7 +16,7 @@
       .slide__designer {
          margin-bottom: 60px;
          display: flex;
-         align-items: flex-start;
+         align-items: center;
          .after {
             font-weight: 600;
             margin-left: 4px;
@@ -25,13 +25,11 @@
             }
          }
          @include md {
-            margin-bottom: 0;
-            height: 78px;
+            margin-bottom: 80px;
          }
          @include xs {
             flex-direction: column;
             align-items: flex-start;
-            height: 110px;
          }
       }
       .slide__content {
