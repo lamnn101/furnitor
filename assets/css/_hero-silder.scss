@@ -93,10 +93,12 @@
       gap: 0 8px;
       @include md {
          bottom: 48px;
+         right: 54px;
       }
       @include xs {
          bottom: 24px;
          left: 16px;
+         right: auto;
       }
       > li {
          list-style: none;

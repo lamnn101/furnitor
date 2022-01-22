@@ -532,6 +532,12 @@ img {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .search-modal .search-modal-inner {
+    padding: 18% 24px 0;
+  }
+}
+
 .search-modal .input-wrapper {
   position: relative;
 }
@@ -544,6 +550,13 @@ img {
   background-color: transparent;
 }
 
+@media screen and (max-width: 575px) {
+  .search-modal .input-wrapper > input {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
+
 .search-modal .input-wrapper .icon-search {
   font-size: 40px;
   right: 0;
@@ -553,6 +566,12 @@ img {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #000000;
+}
+
+@media screen and (max-width: 575px) {
+  .search-modal .input-wrapper .icon-search {
+    font-size: 24px;
+  }
 }
 
 .search-modal .input-wrapper::after {
@@ -571,6 +590,14 @@ img {
   top: 36px;
   right: 36px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+  .search-modal .modal-icon-close {
+    top: 24px;
+    right: 24px;
+    font-size: 24px;
+  }
 }
 
 .sticky-header {
@@ -731,6 +758,7 @@ img {
 @media screen and (max-width: 991px) {
   .hero-slider .slick-dots {
     bottom: 48px;
+    right: 54px;
   }
 }
 
@@ -738,6 +766,7 @@ img {
   .hero-slider .slick-dots {
     bottom: 24px;
     left: 16px;
+    right: auto;
   }
 }
 

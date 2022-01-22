@@ -85,12 +85,9 @@ $(document).ready(function () {
 });
 
 // Section scrolling
-// btnSlogan.addEventListener('click', () => {
-//    const topOfElement = section3.offsetTop - 100;
-//    window.scroll({ top: topOfElement, behavior: 'smooth' });
-// });
 btnSlogan.addEventListener('click', () => {
-   section3.scrollIntoView({ behavior: 'smooth' });
+   const topOfElement = section3.offsetTop - 100;
+   window.scroll({ top: topOfElement, behavior: 'smooth' });
 });
 
 // Sidebar

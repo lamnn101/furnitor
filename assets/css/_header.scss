@@ -309,6 +309,9 @@
       @include md {
          padding: 18% 10% 0;
       }
+      @include xs {
+         padding: 18% 24px 0;
+      }
    }
    .input-wrapper {
       position: relative;
@@ -318,6 +321,10 @@
          padding: 13px 0;
          border: none;
          background-color: transparent;
+         @include xs {
+            font-size: 16px;
+            padding: 10px 0;
+         }
       }
       .icon-search {
          font-size: 40px;
@@ -325,6 +332,9 @@
          z-index: 2;
          @include transform(y);
          color: $primary-color;
+         @include xs {
+            font-size: 24px;
+         }
       }
       &::after {
          position: absolute;
@@ -342,6 +352,11 @@
       top: 36px;
       right: 36px;
       cursor: pointer;
+      @include xs {
+         top: 24px;
+         right: 24px;
+         font-size: 24px;
+      }
    }
 }
 
