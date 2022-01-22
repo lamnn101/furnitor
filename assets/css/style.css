@@ -599,7 +599,7 @@ img {
 
 @media screen and (max-width: 991px) {
   .hero-slider .wrapper {
-    height: 600px;
+    height: 85vh;
   }
 }
 
