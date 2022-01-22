@@ -603,6 +603,12 @@ img {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper {
+    height: 600px;
+  }
+}
+
 .hero-slider .wrapper .slide__designer {
   margin-bottom: 60px;
   display: -webkit-box;

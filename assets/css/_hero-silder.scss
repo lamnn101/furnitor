@@ -15,6 +15,9 @@
       @include md {
          height: 85vh;
       }
+      @include xs {
+         height: 600px;
+      }
 
       .slide__designer {
          margin-bottom: 60px;
