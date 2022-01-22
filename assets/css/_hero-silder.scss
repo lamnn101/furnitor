@@ -12,12 +12,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      @include md {
-         height: 85vh;
-      }
-      @include xs {
-         height: 75vh;
-      }
+      // @include md {
+      //    height: 85vh;
+      // }
+      // @include xs {
+      //    height: 75vh;
+      // }
 
       .slide__designer {
          margin-bottom: 60px;
