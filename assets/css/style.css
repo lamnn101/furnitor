@@ -597,6 +597,18 @@ img {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 991px) {
+  .hero-slider .wrapper {
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper {
+    height: 85vh;
+  }
+}
+
 .hero-slider .wrapper .slide__designer {
   margin-bottom: 60px;
   display: -webkit-box;
