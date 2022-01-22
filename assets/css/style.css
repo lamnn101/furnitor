@@ -583,18 +583,6 @@ img {
   height: 100%;
 }
 
-@media screen and (max-width: 991px) {
-  .hero-slider {
-    height: 600px;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .hero-slider {
-    height: 600px;
-  }
-}
-
 .hero-slider .wrapper {
   height: 100vh;
   display: -webkit-box;
