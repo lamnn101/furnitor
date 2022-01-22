@@ -25,7 +25,7 @@ btnSearch.addEventListener('click', function () {
    modalSearchInner.style.transform = 'translateY(0%)';
    setTimeout(function () {
       searchInput.focus();
-   }, 1000);
+   }, 200);
 });
 
 modalClose.addEventListener('click', function () {

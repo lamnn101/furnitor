@@ -1,5 +1,8 @@
 .slogan {
    padding: 120px 0;
+   @include xs {
+      padding: 60px 0;
+   }
    .wrapper {
       display: flex;
       flex-direction: column;

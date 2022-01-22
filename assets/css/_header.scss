@@ -19,7 +19,6 @@
       display: none;
       @include md {
          display: block;
-         font-size: 28px;
          order: -2;
          margin-right: 28px;
          color: $primary-color;
@@ -32,6 +31,9 @@
          width: 170px;
          order: -1;
          margin: 0 auto;
+      }
+      @include xs {
+         width: 162px;
       }
    }
    &__search {
@@ -48,7 +50,6 @@
          color: $primary-color;
          @include md {
             margin-right: 0;
-            font-size: 28px;
          }
       }
       .label-search {
@@ -91,14 +92,15 @@
          transition: all 0.3s;
          z-index: 21;
       }
+      @include xs {
+         width: 100%;
+      }
       .nav__footer {
          display: none;
          @include md {
             display: flex;
             margin-top: auto;
-            .nav-footer-icon {
-               font-size: 28px;
-            }
+
             .nav-footer-icon--fav {
                margin-left: 12px;
             }
@@ -114,7 +116,6 @@
             top: 44px;
             right: 36px;
             color: $gray;
-            font-size: 28px;
          }
       }
       .nav-link {
@@ -284,11 +285,6 @@
       .feature--cart {
          @include md {
             margin-left: 12px !important;
-         }
-         .icon-cart {
-            @include md {
-               font-size: 28px;
-            }
          }
       }
    }

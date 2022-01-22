@@ -108,7 +108,6 @@ img {
 @media screen and (max-width: 991px) {
   .header__burger {
     display: block;
-    font-size: 28px;
     -webkit-box-ordinal-group: -1;
         -ms-flex-order: -2;
             order: -2;
@@ -129,6 +128,12 @@ img {
         -ms-flex-order: -1;
             order: -1;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .header__logo-mb {
+    width: 162px;
   }
 }
 
@@ -154,7 +159,6 @@ img {
 @media screen and (max-width: 991px) {
   .header__search .icon-search {
     margin-right: 0;
-    font-size: 28px;
   }
 }
 
@@ -212,6 +216,12 @@ img {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .header__nav {
+    width: 100%;
+  }
+}
+
 .header__nav .nav__footer {
   display: none;
 }
@@ -222,9 +232,6 @@ img {
     display: -ms-flexbox;
     display: flex;
     margin-top: auto;
-  }
-  .header__nav .nav__footer .nav-footer-icon {
-    font-size: 28px;
   }
   .header__nav .nav__footer .nav-footer-icon--fav {
     margin-left: 12px;
@@ -243,7 +250,6 @@ img {
     top: 44px;
     right: 36px;
     color: #808080;
-    font-size: 28px;
   }
 }
 
@@ -497,12 +503,6 @@ img {
   }
 }
 
-@media screen and (max-width: 991px) {
-  .header__feature .feature--cart .icon-cart {
-    font-size: 28px;
-  }
-}
-
 .search-modal {
   visibility: hidden;
   opacity: 0;
@@ -583,6 +583,12 @@ img {
   height: 100%;
 }
 
+@media screen and (max-width: 991px) {
+  .hero-slider {
+    height: 600px;
+  }
+}
+
 .hero-slider .wrapper {
   height: 100vh;
   display: -webkit-box;
@@ -597,8 +603,49 @@ img {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 991px) {
+  .hero-slider .wrapper {
+    height: 600px;
+  }
+}
+
 .hero-slider .wrapper .slide__designer {
   margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-slider .wrapper .slide__designer .after {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper .slide__designer .after {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero-slider .wrapper .slide__designer {
+    margin-bottom: 44px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper .slide__designer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .hero-slider .wrapper .slide__content {
@@ -624,25 +671,33 @@ img {
   margin: 60px 0;
 }
 
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper .slide__content .slide__title {
+    margin: 40px 0;
+  }
+}
+
 .hero-slider .wrapper .slide__content .slide__title .title-hero {
   font-size: 72px;
-  font-weight: 800;
   line-height: 72px;
+  font-weight: 800;
   letter-spacing: 3px;
 }
 
-.hero-slider .wrapper .slide__designer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 991px) {
+  .hero-slider .wrapper .slide__content .slide__title .title-hero {
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: 1.2px;
+  }
 }
 
-.hero-slider .wrapper .slide__designer .after {
-  font-weight: 600;
-  margin-left: 4px;
+@media screen and (max-width: 575px) {
+  .hero-slider .wrapper .slide__content .slide__title .title-hero {
+    font-size: 50px;
+    line-height: 54px;
+    font-weight: 700;
+  }
 }
 
 .hero-slider .hero-slider__slide {
@@ -673,6 +728,19 @@ img {
   gap: 0 8px;
 }
 
+@media screen and (max-width: 991px) {
+  .hero-slider .slick-dots {
+    bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-slider .slick-dots {
+    bottom: 24px;
+    left: 16px;
+  }
+}
+
 .hero-slider .slick-dots > li {
   list-style: none;
 }
@@ -694,6 +762,12 @@ img {
 
 .slogan {
   padding: 120px 0;
+}
+
+@media screen and (max-width: 575px) {
+  .slogan {
+    padding: 60px 0;
+  }
 }
 
 .slogan .wrapper {
@@ -751,10 +825,17 @@ img {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 44px;
+}
+
+@media screen and (max-width: 575px) {
+  .our-products .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[7];
+        grid-template-rows: repeat(7, 1fr);
+  }
 }
 
 .our-products__card {
@@ -840,6 +921,21 @@ img {
   padding: initial;
 }
 
+@media screen and (max-width: 575px) {
+  .our-products .card-lg .card-img {
+    background-image: url(../img/product-lg.jpg);
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .our-products .card-lg {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+  }
+}
+
 .our-products .card-lg .card-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -854,9 +950,21 @@ img {
   padding: 40px;
 }
 
+@media screen and (max-width: 575px) {
+  .our-products .card-lg .card-content {
+    padding: 24px;
+  }
+}
+
 .our-products .card-lg .card-content > p {
   max-width: 304px;
   margin-top: 8px;
+}
+
+@media screen and (max-width: 575px) {
+  .our-products .card-lg .card-content > p {
+    max-width: 180px;
+  }
 }
 
 .our-products .card-lg .card-content > button {
@@ -874,6 +982,13 @@ img {
   line-height: 18px;
   font-weight: 400;
   text-transform: initial;
+}
+
+@media screen and (max-width: 575px) {
+  .our-products .card-lg .card-content .event-tag--lg {
+    bottom: 24px;
+    right: 24px;
+  }
 }
 
 .our-products .card-lg .card-content .event-tag--lg .price {
@@ -1047,7 +1162,13 @@ img {
 .container-90 {
   padding: 0 16px;
   margin: 0 auto;
-  max-width: 90%;
+  width: 90%;
+}
+
+@media screen and (max-width: 575px) {
+  .container-90 {
+    width: 100%;
+  }
 }
 
 .btn {
@@ -1149,6 +1270,13 @@ img {
 .section-title {
   font-size: 40px;
   line-height: 48px;
+}
+
+@media screen and (max-width: 575px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 .section-desc {
