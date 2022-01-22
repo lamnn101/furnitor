@@ -3,6 +3,9 @@
    @include md {
       height: 600px;
    }
+   @include xs {
+      height: 600px;
+   }
 
    .wrapper {
       height: 100vh;

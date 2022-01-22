@@ -589,6 +589,12 @@ img {
   }
 }
 
+@media screen and (max-width: 575px) {
+  .hero-slider {
+    height: 600px;
+  }
+}
+
 .hero-slider .wrapper {
   height: 100vh;
   display: -webkit-box;
@@ -804,6 +810,10 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   padding: 24px 0;
+}
+
+.slogan__btn > span {
+  color: #000000;
 }
 
 .our-products .wrapper {

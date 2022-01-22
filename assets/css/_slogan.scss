@@ -26,4 +26,9 @@
       text-transform: uppercase;
       padding: 24px 0;
    }
+   &__btn {
+      > span {
+         color: $primary-color;
+      }
+   }
 }
