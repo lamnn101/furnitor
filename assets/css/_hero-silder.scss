@@ -1,11 +1,5 @@
 .hero-slider {
-   height: 100%;
-   // @include md {
-   //    height: 600px;
-   // }
-   // @include xs {
-   //    height: 600px;
-   // }
+   position: relative;
 
    .wrapper {
       height: 100vh;
@@ -13,10 +7,10 @@
       flex-direction: column;
       justify-content: space-between;
       @include md {
-         height: 85vh;
+         height: 600px;
       }
       @include xs {
-         height: 85vh;
+         height: 600px;
       }
 
       .slide__designer {

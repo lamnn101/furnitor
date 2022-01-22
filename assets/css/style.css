@@ -607,7 +607,7 @@ img {
 }
 
 .hero-slider {
-  height: 100%;
+  position: relative;
 }
 
 .hero-slider .wrapper {
@@ -626,13 +626,13 @@ img {
 
 @media screen and (max-width: 991px) {
   .hero-slider .wrapper {
-    height: 85vh;
+    height: 600px;
   }
 }
 
 @media screen and (max-width: 575px) {
   .hero-slider .wrapper {
-    height: 85vh;
+    height: 600px;
   }
 }
 
