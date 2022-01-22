@@ -659,7 +659,7 @@ img {
 
 @media screen and (max-width: 991px) {
   .hero-slider .wrapper .slide__designer {
-    margin-bottom: 80px;
+    margin-bottom: 44px;
   }
 }
 
@@ -687,6 +687,12 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+}
+
+@media screen and (max-width: 991px) {
+  .hero-slider .wrapper .slide__content {
+    height: 100%;
+  }
 }
 
 .hero-slider .wrapper .slide__content .slide__subtitle {
