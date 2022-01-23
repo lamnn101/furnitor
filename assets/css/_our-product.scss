@@ -11,6 +11,8 @@
       gap: 24px;
       margin-bottom: 44px;
       @include md {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(4, 1fr);
       }
       @include xs {
          grid-template-columns: 1fr;
@@ -82,8 +84,7 @@
             background-position: center;
          }
       }
-      @include md {
-      }
+
       @include xs {
          grid-column: 1 / span 1; // 1/3
       }

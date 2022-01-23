@@ -159,8 +159,9 @@
                width: 100%;
             }
             .nav-link__menu {
-               visibility: visible;
-               opacity: 1;
+               // visibility: visible;
+               // opacity: 1;
+               display: grid;
                @include lg {
                   display: none;
                }
@@ -201,14 +202,14 @@
          line-height: initial;
          width: 1108px;
 
-         display: grid;
+         display: none;
          grid-template-columns: repeat(5, 1fr);
          gap: 0 24px;
          position: absolute;
          left: -361px;
 
-         visibility: hidden;
-         opacity: 0;
+         // visibility: hidden;
+         // opacity: 0;
          transition: all 0.3s;
          .menu-type {
             display: flex;
