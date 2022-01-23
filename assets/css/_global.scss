@@ -137,11 +137,18 @@
    font-size: 32px;
    line-height: 48px;
    font-weight: 600;
+   @include md {
+      font-size: 28px;
+      line-height: 32px;
+   }
 }
 
 // Padding, Margin
-.pb-120 {
+.pb-section {
    padding-bottom: 120px;
+   @include xs {
+      padding-bottom: 80px;
+   }
 }
 
 // Tags
@@ -190,7 +197,7 @@
 
 //Sidebar
 .sidebar-active {
-   @include md {
+   @include lg {
       visibility: visible;
       opacity: 1;
       transform: translateX(0%);
@@ -198,7 +205,7 @@
 }
 
 .overlay-active {
-   @include md {
+   @include lg {
       visibility: visible !important;
       opacity: 1 !important;
    }

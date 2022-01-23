@@ -3,29 +3,54 @@
    overflow-x: hidden;
    .wrapper {
       display: flex;
+      @include lg {
+         flex-direction: column;
+         align-items: stretch;
+      }
    }
    &__left-block {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding-right: 52px;
+      @include lg {
+         padding-right: 0;
+      }
       .slider-nav {
          display: flex;
          gap: 0 10px;
+         @include lg {
+            margin-bottom: 20px;
+         }
       }
       .section-desc {
          padding: 20px 0 60px 0;
          width: 330px;
+         @include lg {
+            padding: 20px 0 40px 0;
+            width: 100%;
+         }
       }
    }
    &__right-block {
    }
    &__slider {
       display: flex;
-      width: 1652px;
+      width: 1696px;
+      @include xl {
+         width: 1272px;
+      }
+      @include lg {
+         width: 1026px;
+         margin-left: -12px;
+      }
+
+      @include xs {
+         width: auto;
+         margin: 0 -12px;
+      }
       .categories-slider__card {
          position: relative;
-         height: 413px;
          margin: 12px 12px;
          transition: all 0.3s;
          cursor: pointer;
@@ -44,11 +69,32 @@
             bottom: 0;
             left: 0;
             padding: 36px 44px 44px 44px;
+            @include lg {
+               padding: 28px 32px 32px 32px;
+            }
          }
          .card__img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            padding-top: 100%;
+            background-position: center;
+            background-size: cover;
+         }
+         .card__img-01 {
+            background-image: url(../img/c_01.jpg);
+         }
+         .card__img-02 {
+            background-image: url(../img/c_02.jpg);
+         }
+         .card__img-03 {
+            background-image: url(../img/c_03.jpg);
+         }
+         .card__img-04 {
+            background-image: url(../img/c_01.jpg);
+         }
+         .card__img-05 {
+            background-image: url(../img/c_02.jpg);
+         }
+         .card__img-06 {
+            background-image: url(../img/c_03.jpg);
          }
       }
    }

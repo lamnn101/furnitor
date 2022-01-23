@@ -17,7 +17,7 @@
    }
    &__burger {
       display: none;
-      @include md {
+      @include lg {
          display: block;
          order: -2;
          margin-right: 28px;
@@ -26,7 +26,7 @@
    }
    &__logo-mb {
       display: none;
-      @include md {
+      @include lg {
          display: block;
          width: 170px;
          order: -1;
@@ -41,19 +41,19 @@
       width: 100%;
       color: $gray;
       cursor: pointer;
-      @include md {
+      @include lg {
          max-width: auto;
          width: auto;
       }
       .icon-search {
          margin-right: 6px;
          color: $primary-color;
-         @include md {
+         @include lg {
             margin-right: 0;
          }
       }
       .label-search {
-         @include md {
+         @include lg {
             display: none;
          }
       }
@@ -63,7 +63,7 @@
       visibility: hidden;
       opacity: 0;
       transition: all 0.3s;
-      @include md {
+      @include lg {
          background-color: rgba(0, 0, 0, 0.4);
          position: fixed;
          z-index: 20;
@@ -74,7 +74,7 @@
       }
    }
    &__nav {
-      @include md {
+      @include lg {
          position: absolute;
          top: 0px;
          left: 0;
@@ -97,7 +97,7 @@
       }
       .nav__footer {
          display: none;
-         @include md {
+         @include lg {
             display: flex;
             margin-top: auto;
 
@@ -110,7 +110,7 @@
       .icon-close-sidebar {
          cursor: pointer;
          display: none;
-         @include md {
+         @include lg {
             display: block;
             position: absolute;
             top: 44px;
@@ -126,11 +126,11 @@
          color: $primary-color;
          + .nav-link {
             margin-left: 40px;
-            @include md {
+            @include lg {
                margin-left: 0;
             }
          }
-         @include md {
+         @include lg {
             font-size: 16px;
             line-height: 50px;
             letter-spacing: 0.2px;
@@ -150,7 +150,7 @@
             height: 2px;
             width: 0%;
             transition: all 0.3s;
-            @include md {
+            @include lg {
                height: 0px;
             }
          }
@@ -161,7 +161,7 @@
             .nav-link__menu {
                visibility: visible;
                opacity: 1;
-               @include md {
+               @include lg {
                   display: none;
                }
             }
@@ -169,13 +169,13 @@
       }
       .nav-link--img {
          width: 170px;
-         @include md {
+         @include lg {
             order: -5;
          }
       }
       .nav-link--expand {
          cursor: pointer;
-         @include md {
+         @include lg {
             height: 50px;
             overflow: hidden;
          }
@@ -188,7 +188,7 @@
             color: $gray;
             font-size: 18px;
             margin-left: 4px;
-            @include md {
+            @include lg {
                transform: rotate(-90deg);
                font-size: 24px;
             }
@@ -251,7 +251,7 @@
          position: absolute;
          opacity: 0;
 
-         @include md {
+         @include lg {
             opacity: 1;
             visibility: visible;
             position: static;
@@ -273,17 +273,17 @@
          }
       }
       .feature--user {
-         @include md {
+         @include lg {
             display: none;
          }
       }
       .feature--fav {
-         @include md {
+         @include lg {
             display: none;
          }
       }
       .feature--cart {
-         @include md {
+         @include lg {
             margin-left: 12px !important;
          }
       }
@@ -306,7 +306,7 @@
       padding: 10% 10% 0;
       transition: all 0.3s;
       transform: translateY(-50%);
-      @include md {
+      @include lg {
          padding: 18% 10% 0;
       }
       @include xs {
