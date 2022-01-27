@@ -63,7 +63,7 @@ $(document).ready(function () {
    });
 });
 
-// Categories slider
+// Slider
 $(document).ready(function () {
    $('.categories__slider').slick({
       // arrows: false,
@@ -84,6 +84,27 @@ $(document).ready(function () {
             breakpoint: 577,
             settings: {
                slidesToShow: 1,
+            },
+         },
+      ],
+   });
+});
+
+$(document).ready(function () {
+   $('.testimonial__slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      speed: 500,
+      dots: true,
+      prevArrow: `<button type="button" id="testimonial-prev" class="btn-slider btn-slider--slick"><span class="material-icons-outlined">arrow_back</span></button>`,
+      nextArrow: `<button type="button" id="testimonial-next" class="btn-slider btn-slider--slick"><span class="material-icons-outlined">arrow_forward</span></button>`,
+      responsive: [
+         {
+            breakpoint: 1201,
+            settings: {
+               slidesToShow: 1,
+               dots: false,
             },
          },
       ],

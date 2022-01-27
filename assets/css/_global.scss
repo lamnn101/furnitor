@@ -30,6 +30,18 @@
    }
 }
 
+.container-testimonial {
+   max-width: 1140px;
+   padding: 0 16px;
+   margin: 0 auto;
+   @include lg {
+      width: 90%;
+   }
+   @include xs {
+      width: 100%;
+   }
+}
+
 // Buttons
 .btn {
    font-weight: 700;

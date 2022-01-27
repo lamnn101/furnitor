@@ -1,0 +1,96 @@
+.testimonial {
+   overflow: hidden;
+   .wrapper {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      .slider-nav {
+         display: none;
+         @include lg {
+            display: flex;
+            gap: 0 12px;
+         }
+         @include xs {
+            margin-top: -12px;
+         }
+      }
+   }
+   &__slider {
+      margin: 40px -10px 0 -10px;
+      width: 100%;
+      @include xs {
+         margin: 12px -10px 0 -10px;
+      }
+      #testimonial-prev,
+      #testimonial-next {
+         @include transform(y);
+         @include lg {
+            visibility: hidden;
+         }
+      }
+      #testimonial-prev {
+         left: -64px;
+      }
+      #testimonial-next {
+         right: -64px;
+      }
+      .slick-dots {
+         list-style: none;
+         display: flex;
+         gap: 0 8px;
+         @include transform(x);
+         bottom: -12px;
+         > li > button {
+            font-size: 0;
+            background-color: $gray-md;
+            height: 10px;
+            width: 10px;
+            border: none;
+            outline: none;
+            border-radius: 50%;
+         }
+         .slick-active button {
+            background-color: $gray;
+            transition: all 0.3s;
+         }
+      }
+   }
+   &__slide {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      height: 309px;
+      margin: 12px;
+      .avatar {
+         width: 84px;
+         height: 84px;
+         border-radius: 50%;
+         object-fit: cover;
+      }
+      .stars {
+         display: flex;
+      }
+      .testimonial-desc {
+         text-align: center;
+         @include lg {
+            max-width: 480px;
+         }
+      }
+      .info {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         .info__name {
+            font-size: 16px;
+            font-weight: 600;
+         }
+         .info__product {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: $gray;
+         }
+      }
+   }
+}
