@@ -1493,6 +1493,36 @@ img {
   font-size: 18px;
 }
 
+.partners::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #e5e5e5;
+}
+
+.partners .wrapper {
+  padding: 36px 0;
+  margin: 0 -14px;
+}
+
+@media screen and (max-width: 575px) {
+  .partners .wrapper {
+    padding: 28px 0;
+  }
+}
+
+.partners__slide {
+  margin: 0 14px;
+  opacity: 0.4;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.partners__slide:hover {
+  opacity: 1;
+}
+
 /* // ============  Responsive Mixin (Mobile First)  ============ //
 
 @mixin sm {
@@ -1708,12 +1738,12 @@ img {
   }
 }
 
-.pb-section {
+.pd-section {
   padding-bottom: 120px;
 }
 
 @media screen and (max-width: 575px) {
-  .pb-section {
+  .pd-section {
     padding-bottom: 80px;
   }
 }

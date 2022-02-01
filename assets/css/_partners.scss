@@ -1,0 +1,26 @@
+.partners {
+   &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: $gray-light;
+   }
+   .wrapper {
+      padding: 36px 0;
+      margin: 0 -14px;
+      @include xs {
+         padding: 28px 0;
+      }
+   }
+   &__slider {
+   }
+   &__slide {
+      margin: 0 14px;
+      opacity: 0.4;
+      transition: all 0.3s;
+      &:hover {
+         opacity: 1;
+      }
+   }
+}
