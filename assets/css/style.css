@@ -1630,6 +1630,116 @@ img {
   -webkit-box-orient: vertical;
 }
 
+.footer {
+  background-color: #f6f6f6;
+}
+
+.footer .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+  padding: 80px 0 80px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .footer .wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer .wrapper {
+    padding: 40px 0 60px 0;
+    gap: 24px;
+  }
+}
+
+.footer__item:first-child {
+  width: 150px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__item:first-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+}
+
+.footer__item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__item:last-child {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.footer__link {
+  display: block;
+  color: #000000;
+}
+
+.footer__link + .footer__link {
+  margin-top: 12px;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 12px;
+  margin-bottom: 12px;
+}
+
+.footer__copyright {
+  text-align: right;
+  color: #808080;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__copyright {
+    text-align: left;
+  }
+}
+
+.scroll-to-top {
+  cursor: pointer;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9999;
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  padding: 13px;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* // ============  Responsive Mixin (Mobile First)  ============ //
 
 @mixin sm {
