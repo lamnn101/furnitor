@@ -1738,6 +1738,10 @@ img {
   border-radius: 50%;
   -webkit-box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 /* // ============  Responsive Mixin (Mobile First)  ============ //
@@ -1917,6 +1921,11 @@ img {
 .modal-active {
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+.scroll-to-top-active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .section-title {

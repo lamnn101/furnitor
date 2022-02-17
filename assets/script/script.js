@@ -14,6 +14,7 @@ const btnBurger = document.querySelector('.header__burger');
 const btnCloseSidebar = document.querySelector('.icon-close-sidebar');
 const overlaySidebar = document.querySelector('.sidebar-overlay');
 const searchInput = document.querySelector('.search-modal__input');
+const btnScrollToTop = document.querySelector('.scroll-to-top');
 
 const section1 = document.querySelector('#section--1');
 const section2 = document.querySelector('#section--2');
@@ -180,3 +181,22 @@ menuCategories.addEventListener('click', function () {
    else iconArrowCategories.style.transform = 'rotate(-90deg)';
    menuCategories.classList.toggle('expand-menu-active');
 });
+
+// Scroll to top
+btnScrollToTop.addEventListener('click', function () {
+   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Visible button scroll to top
+const visibleBtn = function (entries) {
+   const [entry] = entries;
+   if (!entry.isIntersecting)
+      btnScrollToTop.classList.add('scroll-to-top-active');
+   else btnScrollToTop.classList.remove('scroll-to-top-active');
+};
+const visibleOpt = {
+   root: null,
+   threshold: 0,
+};
+const observerForScrollTop = new IntersectionObserver(visibleBtn, visibleOpt);
+observerForScrollTop.observe(heroSlider);

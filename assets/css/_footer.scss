@@ -63,4 +63,8 @@
    padding: 13px;
    border-radius: 50%;
    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.2);
+
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s;
 }
