@@ -15,6 +15,8 @@ const btnCloseSidebar = document.querySelector('.icon-close-sidebar');
 const overlaySidebar = document.querySelector('.sidebar-overlay');
 const searchInput = document.querySelector('.search-modal__input');
 const btnScrollToTop = document.querySelector('.scroll-to-top');
+const logoResponsive = document.querySelector('.header__logo-mb');
+const logoDesktop = document.querySelector('.nav-link--img');
 
 const section1 = document.querySelector('#section--1');
 const section2 = document.querySelector('#section--2');
@@ -158,6 +160,19 @@ btnSlogan.addEventListener('click', () => {
    window.scroll({ top: topOfElement, behavior: 'smooth' });
 });
 
+nav.addEventListener('click', (e) => {
+   e.preventDefault();
+
+   if (e.target.classList.contains('nav-link--scroll')) {
+      const id = e.target.getAttribute('href');
+      const topOfElement = document.querySelector(id).offsetTop - 100;
+      window.scroll({ top: topOfElement, behavior: 'smooth' });
+
+      nav.classList.remove('sidebar-active');
+      overlaySidebar.classList.remove('overlay-active');
+   }
+});
+
 // Sidebar
 btnBurger.addEventListener('click', function (e) {
    e.preventDefault();
@@ -183,8 +198,20 @@ menuCategories.addEventListener('click', function () {
 });
 
 // Scroll to top
-btnScrollToTop.addEventListener('click', function () {
+const scrollToTop = function (el) {
+   el.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   });
+};
+scrollToTop(btnScrollToTop);
+scrollToTop(logoResponsive);
+
+logoDesktop.addEventListener('click', function (e) {
+   e.preventDefault();
    window.scrollTo({ top: 0, behavior: 'smooth' });
+   nav.classList.remove('sidebar-active');
+   overlaySidebar.classList.remove('overlay-active');
 });
 
 // Visible button scroll to top
