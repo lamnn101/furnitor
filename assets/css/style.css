@@ -359,9 +359,7 @@ img {
 
 @media screen and (max-width: 1199px) {
   .header__nav .nav-link--expand .icon-arrow {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    font-size: 24px;
+    display: none;
   }
 }
 
@@ -1742,6 +1740,14 @@ img {
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #000000;
+}
+
+.scroll-to-top:hover > span {
+  color: #ffffff;
 }
 
 /* // ============  Responsive Mixin (Mobile First)  ============ //

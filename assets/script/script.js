@@ -189,30 +189,19 @@ const closeSidebar = function (el) {
 closeSidebar(btnCloseSidebar);
 closeSidebar(overlaySidebar);
 
-// Categories menu expand
-menuCategories.addEventListener('click', function () {
-   if (!menuCategories.classList.contains('expand-menu-active'))
-      iconArrowCategories.style.transform = 'rotate(0deg)';
-   else iconArrowCategories.style.transform = 'rotate(-90deg)';
-   menuCategories.classList.toggle('expand-menu-active');
-});
-
 // Scroll to top
 const scrollToTop = function (el) {
    el.addEventListener('click', function (e) {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      nav.classList.remove('sidebar-active');
+      overlaySidebar.classList.remove('overlay-active');
    });
 };
 scrollToTop(btnScrollToTop);
 scrollToTop(logoResponsive);
-
-logoDesktop.addEventListener('click', function (e) {
-   e.preventDefault();
-   window.scrollTo({ top: 0, behavior: 'smooth' });
-   nav.classList.remove('sidebar-active');
-   overlaySidebar.classList.remove('overlay-active');
-});
+scrollToTop(logoDesktop);
 
 // Visible button scroll to top
 const visibleBtn = function (entries) {
