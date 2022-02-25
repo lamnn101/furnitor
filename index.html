@@ -51,6 +51,35 @@
       <script defer src="./assets/script/script.js"></script>
    </head>
    <body>
+      <!-- Messenger Chat Plugin Code -->
+      <div id="fb-root"></div>
+
+      <!-- Your Chat Plugin code -->
+      <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+      <script>
+         var chatbox = document.getElementById('fb-customer-chat');
+         chatbox.setAttribute('page_id', '109617274993338');
+         chatbox.setAttribute('attribution', 'biz_inbox');
+      </script>
+
+      <!-- Your SDK code -->
+      <script>
+         window.fbAsyncInit = function () {
+            FB.init({
+               appId: '631985374564720',
+               autoLogAppEvents: true,
+               xfbml: true,
+               version: 'v13.0',
+            });
+         };
+      </script>
+      <script
+         async
+         defer
+         crossorigin="anonymous"
+         src="https://connect.facebook.net/en_US/sdk.js"
+      ></script>
       <!-- Header -->
       <header class="header">
          <div class="container-90">
